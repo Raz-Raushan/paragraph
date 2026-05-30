@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include <math.h>
+int main() {
+    char z;
+float a,b,m;
+
+    scanf("%f",&a);
+        scanf("%c",&z);
+    scanf("%f",&b);
+    float c = 0;
+   
+    if(z == '+')
+    {
+        c = a + b;
+        printf("%f\n",c);
+    }
+     else if(z == '-')
+    {
+        c = a - b;
+         printf("%f\n",c);
+    }
+    else if(z == '*')
+    {
+         c = a * b;
+        printf("%f\n",c);
+    }
+    else if(z == '/')
+    {
+       if(b != 0){ c = a / b;
+        printf("%f\n",c);}
+        else 
+            printf("infinite\n");
+    }
+    else if(z == '^')
+    {
+     c = pow(a,b);
+        printf("%f\n",c);
+    }
+    else if(z == '&')
+    {
+        c = sqrt(a);
+        printf("%f\n",c);
+    }
+    return 0;
+}

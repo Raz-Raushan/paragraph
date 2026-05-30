@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char arr[200];
+    cin.getline(arr,200);
+    int total = 15;
+    int count= 0;
+    int remaining = total;
+    char temp_arr[200]; 
+    
+    for(int a=0;arr[a]!='\0';a++){
+        if(arr[a]==' '){
+            
+            temp_arr[count] = arr[a];
+            if(count<=remaining){
+                for (int i=0;i<count;i++){
+                    cout << temp_arr[i];
+                }
+                
+                remaining = remaining-count;
+                count=0;
+                 cout << ' ';
+            }
+            else{
+                remaining = total;
+                cout <<'\n';
+                for (int i=0;i<count;i++){
+                    cout << temp_arr[i];
+                }
+                remaining = remaining-count;
+                count=0;
+             cout << ' ';   
+            }
+        }
+        else{
+            temp_arr[count] = arr[a]; 
+            count++;
+            
+        }
+    }
+    return 0;
+}

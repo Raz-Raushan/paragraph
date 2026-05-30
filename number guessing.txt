@@ -1,0 +1,88 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main() {
+    cout<<"Choose a level "<<endl;
+    cout<<"Easy :- press '1'"<<endl<<"(You have to guess between 0 to 25)"<<endl;
+    cout<<"Medium :- press '2'"<<endl<<"(You have to guess between 0 to 50)"<<endl;
+    cout<<"Hard :- press '3'"<<endl<<"(You have to guess between 0 to 100)"<<endl;
+
+int z;
+cin>>z;
+    srand(time(0));
+    if(z == 1){
+        cout<<"EASY LEVEL"<<endl;
+          cout<<"YOU HAVE ONLY 5 CHANCE";
+        int n;
+        
+    int x = rand() % 26;
+   
+    for(int a=0;a<5;a++){
+        cin>>n;
+    
+        if(n == x){
+            cout<<" YOU GUESS THE NUMBER RIGHT."<<endl;
+            cout<<" YOU WON";
+        break;
+        }
+    else
+    {     
+        cout<<"TRY AGAIN"<<endl;
+    }   
+    }
+    cout<<"THE NUMBER IS :- " << x;
+}
+else if(z == 2){
+        cout<<"MEDIUM LEVEL"<<endl;
+          cout<<"YOU HAVE ONLY 4 CHANCE";
+        int n;
+        
+    int x = rand() % 51;
+    
+
+
+    for(int a=0;a<4;a++){
+        cin>>n;
+    
+        if(n == x){
+            cout<<" YOU GUESS THE NUMBER RIGHT."<<endl;
+            cout<<" YOU WON";
+        break;
+        }
+    else
+    {     
+        cout<<"TRY AGAIN"<<endl;
+    }   
+    }
+   cout<<"THE NUMBER IS :- " << x;
+}
+else if(z == 3){
+        cout<<"HARD LEVEL"<<endl;
+        cout<<"YOU HAVE ONLY 3 CHANCE";
+        int n;
+        
+    int x = rand() % 101;
+    
+
+
+    for(int a=0;a<3;a++){
+        cin>>n;
+    
+        if(n == x){
+            cout<<" YOU GUESS THE NUMBER RIGHT."<<endl;
+            cout<<" YOU WON";
+        break;
+        }
+    else
+    {     
+        cout<<"TRY AGAIN"<<endl;
+    }   
+    }
+     cout<<"THE NUMBER IS :- " << x;
+}
+
+    
+return 0;
+}
+    
